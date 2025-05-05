@@ -9,6 +9,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.UUID;
 
@@ -34,7 +35,7 @@ public class Product {
 
     private String describe_product;
 
-    private double price_product;
+    private BigDecimal price_product;
 
     private int amount_product;
 

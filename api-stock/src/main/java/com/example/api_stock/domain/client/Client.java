@@ -8,7 +8,7 @@ import lombok.Setter;
 
 
 @Entity
-@Table(name ="client")
+@Table(name ="clients")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -22,7 +22,7 @@ public class Client {
 
     private String name_client;
     private String mail_client;
-    private String cnp_cpf_client;
+    private String cnpj_cpf_client;
     private String phone_client;
     private String address_client;
 }

@@ -19,15 +19,15 @@ public class ItemSale {
     @Id
     @GeneratedValue(generator = "UUID")
     @Column(columnDefinition = "CHAR(36)", updatable = false, nullable = false)
-    private String id_sale;
+    private String id_item_sale;
 
     @ManyToOne
     @JoinColumn(name = "id_product", referencedColumnName = "id_product")
-    private Product idproduct;
+    private Product product;
 
     @ManyToOne
     @JoinColumn(name = "id_sale", referencedColumnName = "id_sale")
-    private Sale idsale;
+    private Sale sale;
 
     private int amount_item;
 

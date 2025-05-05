@@ -1,11 +1,8 @@
 package com.example.api_stock.controllers;
 
-
-import com.example.api_stock.domain.category.Category;
 import com.example.api_stock.domain.category.SubCategory;
 import com.example.api_stock.domain.product.Product;
 import com.example.api_stock.dto.product.ProductDTO;
-import com.example.api_stock.repositories.CategoryRepository;
 import com.example.api_stock.repositories.ProductRepository;
 import com.example.api_stock.repositories.SubCategoryRepository;
 import com.example.api_stock.service.ProductService;
@@ -14,13 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
-
-import static java.util.stream.Collectors.toList;
 
 @RestController
 @RequestMapping("/products")

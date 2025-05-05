@@ -26,13 +26,16 @@ public class Sale {
 
     @ManyToOne
     @JoinColumn(name = "id_client", referencedColumnName = "id_client")
-    private Client idclient;
+    private Client client;
 
     @ManyToOne
     @JoinColumn(name = "id_user", referencedColumnName = "id_user")
-    private User iduser;
+    private User user;
 
     private double total_sale;
     private LocalDate date_sale;
+
+    @Column(name = "cpf_na_nota")
+    private String cpfClient;
 
 }

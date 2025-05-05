@@ -1,4 +1,5 @@
 package com.example.api_stock.dto.product;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public record ProductDTO (
@@ -6,7 +7,7 @@ public record ProductDTO (
         String idProduct,
         String name,
         String describe,
-        double price,
+        BigDecimal price,
         int amount,
         LocalDate datavalidade,
         String subcategoryId

@@ -39,6 +39,7 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.POST, "/categories/register").permitAll()
                         .requestMatchers(HttpMethod.POST, "/subCategory/register").permitAll()
                         .requestMatchers(HttpMethod.POST, "/products/register").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/sales").permitAll()
                         .requestMatchers(HttpMethod.GET, "/user/list").permitAll()
                         .requestMatchers(HttpMethod.DELETE, "/categories/delete/{id}").permitAll()
                         .requestMatchers(HttpMethod.GET, "/categories/list").permitAll()
