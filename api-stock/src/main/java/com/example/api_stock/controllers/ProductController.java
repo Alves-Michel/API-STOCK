@@ -3,6 +3,7 @@ package com.example.api_stock.controllers;
 import com.example.api_stock.domain.category.SubCategory;
 import com.example.api_stock.domain.product.Product;
 import com.example.api_stock.dto.product.ProductDTO;
+import com.example.api_stock.error.BusinessException;
 import com.example.api_stock.repositories.ProductRepository;
 import com.example.api_stock.repositories.SubCategoryRepository;
 import com.example.api_stock.service.ProductService;
@@ -84,7 +85,7 @@ public class ProductController {
         System.out.println("Buscando produtos com o nome: " + name); // Log para depuração
 
         if (name == null || name.isEmpty()) {
-            throw new IllegalArgumentException("Name parameter is required");
+            throw new BusinessException("Name parameter is required");
         }
 
         List<ProductDTO> products = productService.buscarProduto(name);

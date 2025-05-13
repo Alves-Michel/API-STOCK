@@ -1,5 +1,6 @@
 package com.example.api_stock.controllers;
 
+import com.example.api_stock.domain.desconto.Discont;
 import com.example.api_stock.domain.sale.Sale;
 import com.example.api_stock.dto.DtoConverter;
 import com.example.api_stock.dto.sales.SaleDTO;
@@ -23,8 +24,15 @@ public class SaleController {
     public Sale createSale(@RequestBody SaleDTO saleDTO){
         Sale sale = DtoConverter.fromDTO(saleDTO);
         var itemSales = DtoConverter.fromItemDTOList(saleDTO.items());
+        Discont discont = saleDTO.discount() != null ? new Discont(
 
-        return saleService.createSaleWithItems(sale, itemSales, sale.getCpfClient());
+                saleDTO.discount().value(),
+                saleDTO.discount().type()
+
+
+        ): null;
+
+        return saleService.createSaleWithItems(sale, itemSales, sale.getCpfClient(), discont);
 
 
     }
